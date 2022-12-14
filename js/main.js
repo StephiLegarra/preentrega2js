@@ -14,6 +14,7 @@ let apellido = prompt("Ingrese su apellido").toLowerCase();
 // FUNCION SALUDO
 function saludo() {
     alert("Bienvenid@ " + nombre + " "+ apellido + " Gracias por visitarnos. Todas las promociones y compras que hagas las recibirás en tu correo electrónico una vez que te registres");
+    console.log ("Bienvenid@ " + nombre + " "+ apellido + " Gracias por visitarnos. Todas las promociones y compras que hagas las recibirás en tu correo electrónico una vez que te registres");
 }
 saludo();
 
@@ -41,6 +42,14 @@ function altaCliente() {
     let apellido = prompt("Ingrese su apellido").toLowerCase();
     let edad = parseInt(prompt("Ingrese su edad"));
     let email = prompt("Ingrese su casilla de correo electrónico").toLowerCase();
+    while (email.search("@") == -1) {
+        console.log ("Ingrese un correo valido");
+        alert ("Ingrese un correo valido");
+      altaCliente();
+        console.log (email);
+    }
+        alert ("Correo electronico registrado! Muchas gracias.")
+        console.log (email);
     let cliente = new Cliente (nombre, apellido, edad, email);
     arrayClientes.push(cliente);
     console.log (arrayClientes);
