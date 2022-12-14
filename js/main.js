@@ -110,106 +110,48 @@ function salir() {
     alert ("Gracias por visitar nuestro sitio web de " + local);
 }
 
-/* // VOLVER A ELEGIR 
+// VOLVER AL MENU PRINCIPAL
 function volver() {
-
-    inicio = parseInt(prompt("¿Qué deseas hacer?: " + "\n\n" + ("1. Volver al Inicio") + "\n" + ("2. Salir")));
-
-    switch (inicio) {
+    consulta = parseInt(prompt("¿Desea hacer otra consulta?: " + "\n\n" + ("1. Si, quiero volver al Inicio") + "\n" + ("2. No gracias, deseo salir")));
+    switch (consulta) {
         case 1:
+            menu();
             break;
 
         case 2:
+            salir();
             break;
 
         default:
-            console.log("Solo puedes elegir entre 1 y 2");
-            alert("Solo puedes elegir entre 1 y 2");
+            console.log("Debes elegir una de las opciones");
+            alert("Debes elegir una de las opciones");
             volver();
             break;
     }
 
-} */
-
-
+} 
 
 // EJECUTO EL PROGRAMA
 let opcion = menu();
 switch (opcion) {
     case 1: 
       altaCliente();
-      
+      volver();
       break;
     case 2:
         bajaCliente();
-       
+        volver();
       break;
     case 3:
         elegirProducto();
         finalizarCompra();
+        volver();
         break;
     case 4:
         salir();
+        volver();
         break;
     default: 
     alert ("opcion incorrecta");
     break;
 }
-
-/*
-
-
-while (email != email.includes("@")) {
-    alert ("Ingrese un correo valido");
-   let email = prompt ("Ingrese su casilla de correo electrónico").toLowerCase();
-    console.log (email);
-}
-    alert ("Correo electronico registrado! Muchas gracias.")
-    console.log (email); */
-
-
-/* if (email.includes("@")){
-   alert ("Correo electronico registrado! Muchas gracias.")
-    console.log (email);
- } else {
-   alert ("Este correo no es valido, lo siento.");
- }
- while (email != email.includes("@")) {
-        alert ("Ingrese un correo valido");
-        let email = prompt ("Ingrese su casilla de correo electrónico").toLowerCase();
-        console.log (email);
-    } */
-
-
-    /*
-function registroCliente() {
-        alert("Bienvenid@ " + nombre + " "+ apellido + " Gracias por visitarnos. Todas las promociones y compras que hagas las recibirás en tu correo electrónico: " + email);
-    }
-
-// ARRAY VACIO
-const carritoCompra = [];
-
-// ELEGIR LOS PRODUCTOS
-function seleccionarProducto() {
-
-    let producto 
-    do {
-        producto = parseInt(prompt("Ingrese el producto que desea consultar \n 1. Mates \n 2. Cuencos \n 3. portasahumerios \n tabla"));
-    } while (producto != 1 && producto != 2 && producto != 3 && producto != 4);
-    switch(producto){
-        case 1: 
-        return "Mates";
-        case 2:
-        return "Cuencos";
-        case 3: 
-        return "portasahumerios";
-        case 4:
-        return "tabla";
-
-        default:
-            console.log ("Elige un numero valido");
-            alert ("Elige un numero valido");
-            break;
-    }
-}
-*/
